@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect } from "react";
-import { useForm } from 'react-hook-form';
+import { useForm } from "react-hook-form";
 
 
 
@@ -41,7 +41,7 @@ const UsersForm = ({ getUsers, userSelected, deselectUser }) => {
 
     return (
         <form
-            className=""
+            className="users-form"
             onSubmit={handleSubmit(submit)}
         >
 
@@ -63,7 +63,7 @@ const UsersForm = ({ getUsers, userSelected, deselectUser }) => {
             </div>
             <div className="input-container">
                 <i class="fa-solid fa-calendar-week"></i>
-                <input {...register("birthday")} type="date" placeholder="mm/dd/yyyy" id="birthday" />
+                <input {...register("birthday")} type="date" id="birthday" />
             </div>
             <button>Submit</button>
         </form>

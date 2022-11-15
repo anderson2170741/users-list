@@ -2,21 +2,22 @@ import React from 'react';
 
 const UsersList = ({ usersList, selectUser }) => {
     return (
-        <div>
-            {usersList.map((user) => (
-                    <ul key={user.id}>
-                        <li>
-                            <h3><b>Name: </b>{user.first_name}</h3>
-                            <h3><b>Surname: </b>{user.last_name}</h3>
-                            <h3><b>Email: </b>{user.email}</h3>
-                            <h3><b>Date of Birth: </b>{user.birthday}</h3>
-                            <button onClick={selectUser}>Select</button>
-                        </li>
-                    </ul>
+        <ul>
+            {
+                usersList.map(user => (
+                    <li key={user.id}>
+                        <h3>{user.first_name}</h3>
+                        <div><b>Surname: </b>{user.last_name}</div>
+                        <div><b>Email: </b>{user.email}</div>
+                        <div><b>Date of Birth: </b>{user.birthday}</div>
+                        <button onClick={() => selectUser(user)}>
+                            Select
+                        </button>
+                    </li>
 
                 ))
             }
-        </div>
+        </ul>
     );
 };
 

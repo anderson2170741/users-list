@@ -5,6 +5,7 @@ import UsersForm from './UsersForm';
 import './App.css'
 
 function App() {
+
   const [usersList, setUsersList] = useState([]);
   const [userSelected, setUserSelected] = useState(null);
 
@@ -19,7 +20,7 @@ function App() {
   }
 
   const selectUser = (user) => {
-    setUserSelected(user)
+    setUserSelected(user);
   }
 
   const deselectUser = () => setUserSelected(null);
@@ -37,7 +38,6 @@ function App() {
         usersList={usersList}
         selectUser={selectUser} 
       />
-
     </div>
   )
 }
