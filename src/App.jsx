@@ -37,6 +37,7 @@ function App() {
       <UsersList
         usersList={usersList}
         selectUser={selectUser} 
+        deselectUser={deselectUser} 
       />
     </div>
   )

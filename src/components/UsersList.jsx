@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UsersList = ({ usersList, selectUser }) => {
+const UsersList = ({ usersList, selectUser, deselectUser }) => {
     return (
         <ul>
             {
@@ -10,9 +10,10 @@ const UsersList = ({ usersList, selectUser }) => {
                         <div><b>Surname: </b>{user.last_name}</div>
                         <div><b>Email: </b>{user.email}</div>
                         <div><b>Date of Birth: </b>{user.birthday}</div>
-                        <button onClick={() => selectUser(user)}>
-                            Select
-                        </button>
+                        <i onClick={() => selectUser(user)} class="fa-solid fa-user-pen"></i>
+                        <i onClick={() => deselectUser(user)} class="fa-solid fa-user-xmark"></i>
+                        <i class="fa-solid fa-trash"></i>
+                        
                     </li>
 
                 ))
