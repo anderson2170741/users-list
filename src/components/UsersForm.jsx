@@ -40,18 +40,39 @@ const UsersForm = ({ getUsers, userSelected, deselectUser }) => {
     }
 
     return (
+
+        <form
+            className="Users-form"
+            onSubmit={handleSubmit(submit)}
+        >
+            <div className="input-container">
+                <input {...register("first_name")} type="name" id="firstName" />
+                <input {...register("last_name")} type="name" id="lastName" />
+            </div>
+            <div className="input-container">
+                <input {...register("email")} type="email" id="email" />
+            </div>
+            <div className="input-container">
+                <input {...register("password")} type="password" id="password" />
+            </div>
+            <div className="input-container">
+                <input {...register("birthday")} type="date" id="birthday" />
+            </div>
+            <button>Submit</button>
+        </form>
+
+        /*
         <form
             className="users-form"
             onSubmit={handleSubmit(submit)}
         >
-
             <div className="input-container" >
                 <i class="fa-solid fa-user"></i>
-                <input {...register("first_name")} type="text" placeholder="first name" id="first_name" />
+                <input {...register("first_name")} type="text" placeholder="first name" id="firstName" />
             </div>
             <div className="input-container">
 
-                <input {...register("last_name")} type="text" placeholder="last name" id="last_name" />
+                <input {...register("last_name")} type="text" placeholder="last name" id="lastName" />
             </div>
             <div className="input-container">
                 <i class="fa-solid fa-envelope"></i>
@@ -59,14 +80,14 @@ const UsersForm = ({ getUsers, userSelected, deselectUser }) => {
             </div>
             <div className="input-container">
                 <i class="fa-solid fa-lock"></i>
-                <input {...register("password")} type="password" placeholder="password" id="password" />
+                <input {...register("password")} type="text" placeholder="password" id="password" />
             </div>
             <div className="input-container">
                 <i class="fa-solid fa-calendar-week"></i>
                 <input {...register("birthday")} type="date" id="birthday" />
             </div>
             <button>Submit</button>
-        </form>
+        </form>*/
     )
 }
 
